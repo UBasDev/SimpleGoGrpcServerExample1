@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = "example.com/goproject3";
+
+service Auhtor1 {
+    rpc Author1CreateService(AuthorCreateRequest1) returns (AuthorCreateResponse1);
+}
+
+message AuthorCreateRequest1{
+    string authorName = 1;
+    int64 authorAge = 2;
+}
+message AuthorCreateResponse1{
+    int64 authorId = 1;
+    string authorName = 2;
+    int64 authorAge = 3;
+}

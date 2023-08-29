@@ -1,0 +1,16 @@
+syntax = "proto3";
+option go_package = "example.com/goproject3";
+
+service Book1 {
+    rpc Book1CreateService(BookCreateRequest1) returns (BookCreateResponse1);
+}
+
+message BookCreateRequest1{
+    string bookName = 1;
+    int64 bookPrice = 2;
+}
+message BookCreateResponse1{
+    int64 bookId = 1;
+    string bookName = 2;
+    int64 bookPrice = 3;
+}
